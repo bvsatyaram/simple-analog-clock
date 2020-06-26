@@ -53,7 +53,7 @@ class Clock {
     const beginningOfDay = new Date(beginningOfHour.getTime());
     beginningOfDay.setHours(0);
     const timeSinceBeginningOfDay = currentTime - beginningOfDay;
-    angles.hours = (beginningOfDay / 120000).toFixed(1);
+    angles.hours = (timeSinceBeginningOfDay / 120000).toFixed(1);
 
     return angles;
   }
